@@ -3,14 +3,14 @@
         <v-navigation-drawer v-model = "drawer" class = "grey darken-3" dark app clipped fixed temporary>
             <v-list-item>
                 <v-list-item-content>
-                    <v-list-item-title class="title">Modul 11</v-list-item-title>
+                    <v-list-item-title class="title">UGD 11</v-list-item-title>
                     <v-list-item-subtitle>Vue Consume REST API</v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
 
             <v-divider></v-divider>
             <v-list>
-                <v-list-item v-for="item in items" :key="item.title" link>
+                <v-list-item v-for="item in items" :key="item.title" link :to="item.path">
                     <v-list-item-icon>
                         <v-icon>{{ item.icon }}</v-icon>
                     </v-list-item-icon>
@@ -48,7 +48,15 @@ export default {
         return {
             drawer: null,
             items: [
-                { title: 'User Controller', icon: 'mdi-human-male'},
+                { title: 'User Controller',
+                path: '/user', 
+                icon: 'mdi-human-male'
+                },
+                
+                { title: 'Branch Controller',
+                path: '/branch', 
+                icon: 'mdi-human-male'
+                },
             ],
         }
     },

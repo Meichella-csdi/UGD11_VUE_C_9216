@@ -14,8 +14,18 @@ const routes = [
         children: [
             {
                 name: 'UserController',
-                path: '',
+                path: '/user',
                 component: loadView('userController')
+            },
+            {
+                name: 'LandingPage',
+                path: '',
+                component: loadView('landingPage')
+            },
+            {
+                name: 'BranchController',
+                path: '/branch',
+                component: loadView('branchController')
             }
         ]
     },
